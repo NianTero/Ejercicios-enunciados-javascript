@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //CREO VARIABLES Y ASIGNO VALORES
+            var posiciones = prompt("Cuantas  posicones quiere: ");
+            arreglo = new Array(posiciones);
+            var suma=0;
+            //RECORRO EL CICLO Y MIRA SI ES PAR O IMPAR PARA LOS DOS CASOS AGREGO LA FORMULA QUE DICE
+            for(var i = 0; i < posiciones; i++){
+                if (i % 2 == 0){
+                arreglo [i] = (i + 7);
+                //SUMO LOS PARES
+                suma += i;
+                }
+            else{
+                arreglo [i] = (i - 1);
+                }
+                //IMPRIMO ARREGLO
+                document.write("["+i+"]="+arreglo[i]+"<br/>");     
+            }
+            //MUESTRO LA SUMATORIA
+            
+            
+            var produ=1;
+            
+            for (var i = 0; i < posiciones; i=i+2) {
+                produ=produ*arreglo[i];
+            }   
+            document.write("La sumatoria es: "+suma+"<br/>");
+            document.write("La productoria es: "+produ+"<br/>");
+            
+            
+            
+            
+        </script> 
+    </body>
+</html>
