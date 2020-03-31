@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prrimo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var numero = prompt("Digite el numero: ");
+            var contador = 0;
+            var I;
+            
+            
+           
+            
+            for(I = 1; I <= numero; I++)
+        {
+            if((numero % I) == 0)
+            {
+                contador++;
+            }
+        }
+        
+        if(numero == 1)
+        {
+            document.write("El numero no es primo");   
+        }
+ 
+        else if(contador <= 2)
+        {
+            document.write("El numero es primo");   
+        }
+        else{
+            document.write("El numero no es primo");
+        }
+        
+            
+            
+        </script>
+    </body>
+</html>
