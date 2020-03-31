@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //ENLACE GIT: https://github.com/NianTero/Ejercicios-enunciados-javascript.git
+            //CREO VARIABLES Y LES ASIGNO VALORES
+            var numero = prompt("Ingrese un numero");
+            var sum = 0;
+            //SI EL NUMERO ES MENOR A 10 LO IMPRIME SOLO
+            if (numero < 10) {
+                document.write(numero);
+                //SI NO PUES HACE COMO SI ROMPIERA EL NUMERO Y LE ENCIMA EL DIGITO DEPENDE COMO SEA EL NUMERO
+            } else {
+                for (var i = 1; i < 10; i++)
+                {
+                    //COMPARO SI EL NUMERO ES CRECIENTE
+                    if (numero < 100 || numero < 10 + 99)
+                    {
+                        sum = i + parseInt(i + "" + i);
+                        if (sum == numero) {
+                            document.write(i + " + " + (i + "" + i));
+                        }
+                        
+                    } 
+                    else if ((numero > 10 + 99 && numero < 1000) || numero < 10 + 99 + 999)
+                    {
+                        //COMPARO SI EL NUMERO ES CRECIENTE
+                        sum = i + parseInt(i + "" + i) + parseInt(i + "" + i + "" + i);
+                        if (sum == numero)
+                            document.write(i + " + " + (i + "" + i) + " + " + (i + "" + i + "" + i));
+
+                    } else if ((numero > 10 + 99 + 999 && numero < 10000) || numero < 10 + 99 + 999 + 9999)
+                    {
+                        //COMPARO SI EL NUMERO ES CRECIENTE
+                        sum = i + parseInt(i + "" + i) + +parseInt(i + "" + i + "" + i) + parseInt(i + "" + i + "" + i + "" + i);
+                        if (sum == numero) {
+                            document.write(i + " + " + (i + "" + i) + " + " + (i + "" + i + "" + i) + " + " + (i + "" + i + "" + i + "" + i));
+                        }
+                    }
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
