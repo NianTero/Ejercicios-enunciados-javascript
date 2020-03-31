@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Bisiesto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+            var anyo;
+
+            anyo = prompt('Ingrese el Año:', '');
+
+            anyo = parseInt(anyo)
+
+
+            if ((((anyo % 100) != 0) && ((anyo % 4) == 0)) || ((anyo % 400) == 0)) {
+
+                document.write('El año es bisiesto: ');
+
+            } else {
+                document.write('El año no es bisiesto: ');
+            }
+
+
+        </script>
+
+    </body>
+
+</html>

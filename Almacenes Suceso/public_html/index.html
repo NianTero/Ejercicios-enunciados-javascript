@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            
+             //CREO VARIABLES Y LE ASIGNO VALORES A CADA VARIABLE Y CREO VAIABLES PARA SACAR RESULTADOS
+            var costo_compra = prompt("Costo de compra: ");
+            var tipo_producto = prompt("Tipo de producto [1] Perecedero, [2] No perecedero: ");
+            var tipo_conservacion = prompt("Tipo de conservacion  [1]Frio, [2]Ambiente : ");
+            var periodo_conservacion = prompt("Periodo de conservación (días): ");
+            var periodo_almacenamiento = prompt("Periodo de almacenamiento (días): ");
+            var volumen = prompt("Volumen (litros): ");
+            var medio_almacenamiento = prompt("Medio de almacenamiento [1]Nevera, [2]Congelador, [3]Eestanteria, [4]Guacal :");
+            var costo_almacenamiento;
+            var depreciacion;
+            var exhibicion;
+            
+                    
+            function CostoAlmacenamiento(){
+                //SI ES PERECEDERO
+                if(tipo_producto == 1){
+                    
+                    if((tipo_conservacion == 1)&&(perido_conservacion < 10)){
+                        costo_almacenamiento = costo_compra * 0.05;   
+                    }
+                    else if((tipo_conservacion == 1)&&(perido_conservacion >= 10)){
+                        costo_almacenamiento = costo_compra * 0.1;
+                    }
+                    else if((tipo_conservacion == 2)&&(periodo_almacenamiento < 20)){
+                        costo_almacenamiento = costo_compra * 0.03;
+                    }
+                    else if((tipo_conservacion == 2)&&(periodo_almacenamiento > 20)){
+                        costo_almacenamiento = costo_compra * 0.1;
+                    }
+                    else if((tipo_conservacion == 2)&&(periodo_almacenamiento == 20)){
+                        costo_almacenamiento = costo_compra * 0.05;
+                    }   
+                }
+                //NO PERECEDERO
+                if(tipo_producto == 2){
+                    
+                    if(volumen >= 50 ){
+                        costo_almacenamiento = costo_compra * 0.1;
+                    }
+                    else if(volumen < 50 ){
+                        costo_almacenamiento = costo_compra * 0.2;
+                    }
+                
+                }
+                return costo_almacenamiento;
+            }
+            // A LA VARIABLE VALOR DE ASINO COSTO DE LAMACENAMIENTO
+            var valor = CostoAlmacenamiento();
+            
+            //PORCENTAJE DEPRECIACION
+            if (periodo_almacenamiento < 30){
+                depreciacion = 0.95;   
+            }
+            else{
+                depreciacion = 0.85; 
+            }
+            
+            //COSTO DE EXHIBCION
+            function Exhibicion(){
+                
+                if(tipo_producto == 1){//PERECEDEROS
+                    if((medio_almacenamiento == 1)&&(tipo_conservacion == 1)){//NEVERA
+                        exhibicion = valor * 2;
+                    }
+                    else if((medio_almacenamiento == 2)&&(tipo_conservacion == 1)){//CONGELADOR
+                        exhibicion = valor;
+                    }   
+                }
+                
+                else if (tipo_producto == 2) {//NO PERECEDEROS
+                    if (medio_almacenamiento == 3) {//ESTANTERIA
+                        exhibicion = valor * 0.05;   
+                    }
+                    else if(medio_almacenamiento == 4){//GUACAL
+                        exhibicion = valor * 0.07;
+                    }
+                }
+                return exhibicion;
+            }
+            // A LA VARIABLE exhibicion_total lE ASIGNO COSTO DE Exhibicion
+            var exhibicion_total= Exhibicion();
+            
+            
+            
+
+            //CALCULO VALOR DEL RODUCTO
+            var valor_producto;
+            //PASO A ENTERS Y DECIMALES Y CALCULO
+            valor_producto = ((parseInt(costo_compra)+parseInt(valor)+parseInt(exhibicion_total))*parseFloat(depreciacion));
+            
+            
+            //CALCULO VALOR DE VENTA
+            var valor_venta;
+            //PASO A ENTEROS
+            if(tipo_producto == 2)
+            {
+                valor_venta = valor_producto+(valor_producto*0.2);
+            }
+            else if (tipo_producto == 1) {
+                valor_venta = valor_producto+(valor_producto*0.4);
+            }
+
+            
+
+            document.write("-- DATOS DE ENTRADA --"+"<br\>");
+            document.write("Costo de compra :"+costo_compra+ "<br\>");
+            document.write("Tipo de producto [1] Perecedero, [2] No perecedero :"+tipo_producto+ "<br\>");
+            document.write("Tipo de conservacion  [1]Frio, [2]Ambiente :"+tipo_conservacion+ "<br\>");
+            document.write("Periodo de conservación (días) : "+periodo_conservacion+"<br\>");
+            document.write("Periodo de almacenamiento (días) :"+periodo_almacenamiento+"<br\>");
+            document.write("Volumen (litros) : " + volumen + "<br\>");
+            document.write("Medio de almacenamiento [1]Nevera, [2]Congelador, [3]Eestanteria, [4]Guacal : " + medio_almacenamiento + "<br\>");
+            document.write("-- CALCULOS --"+"<br\>");
+            document.write("Costo almacenamiento: "+valor+"<br\>");
+            document.write("Porcentaje depreciacion: "+depreciacion+"<br\>");
+            document.write("Costo exhibicion: "+exhibicion_total+"<br\>");
+            document.write("Valor producto: "+valor_producto+"<br\>");
+            document.write("Valor venta "+valor_venta+"<br\>");
+            
+            
+            
+            
+            
+            
+         
+           
+
+        </script>
+    </body>
+</html>
