@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //CREO VARIABLES
+            var suma=0;
+            var promedio=0;
+            //CICLO FOR DE 1 HASTA LIMITE
+            var limite = prompt("Cuantos numeros desea: ")
+            for (var x = 1; x <= limite; x++) {
+                document.write(x+"<br\>");
+                suma = suma + x;
+            }
+            promedio = (suma/limite);
+            document.write("Las suma es: "+suma+"<br\>");
+            document.write("El promedio es: "+promedio+"<br\>");
+            
+        </script>
+    </body>
+</html>

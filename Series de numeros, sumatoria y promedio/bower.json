@@ -1,0 +1,7 @@
+{
+    "name": "Series_de_numeros__sumatoria_y_promedio", "version": "1.0.0", "main": "path/to/main.css", "ignore": [
+        ".jshintrc", "**/*.txt"
+    ], "dependencies": {
+    }, "devDependencies": {
+    }
+}
