@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Serie taylor</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var limite = prompt("Cuantos terminos desea: ");
+            var x = prompt("Ingrese el valor de x:  ");
+            var a;
+            
+            function factorial(a) {
+                if (a === 0) {  
+                    return 1;
+                }
+                else
+                {
+                    return a * factorial(a - 1);
+                }
+            }
+            
+
+            var x = 1;
+
+            for (var i = 1; i <= limite; i++) {
+                var x = x + 1/factorial(i);
+            }
+            document.write(x);
+            
+            /**
+            var limite = prompt("Cuantos terminos desea: ");
+            var x = prompt("Ingrese el valor de x:  ");
+            var s = 0;
+            var t;
+            
+            //CALCULO
+            for (var i = 0; i < limite; i++) {
+                t = Math.pow(x, i) / factorial(i);
+                s = s + t;
+            }
+            
+            document.write(x,s);
+            
+            
+            function factorial(limite){
+                //CREO VARIABLE
+            var contador=0;
+           
+             //CICLO FOR DE 1 HASTA LIMITE  Y HAGO LA RESPECTIVA OPERACION
+            for (var x = 1; x <= limite; x++) 
+                {
+                    contador=contador*x;
+                }
+                return contador;   
+            }
+              **/
+            //CREO VARIABLES INGRESO DATOS
+            
+        </script>
+    </body>
+</html>
