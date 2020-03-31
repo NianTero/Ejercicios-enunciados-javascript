@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Fibonacci modificado</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //CREO VARIABLES Y ASIGNO VALORES Y CREO MIS AUXILIARES 
+            var limite = prompt("Cuantos terminos desea:  ");
+            var aux = 0;//a
+            var aux1 = 1;//b
+            var c = 2;
+            var d;
+            var suma = 3;
+            //INICIO DESDE 2 HASTA EL LIMITE Y HAGO EL RESPECTIVO CALCULO 
+            //USO LA VARIABLE SUMA DE CONTADOR para la sumatoria
+            for (var i = 3; i <= limite; i++) {
+                d = aux + aux1 + c;
+                document.write(",["+d+"] ");
+                suma = suma + d;
+                aux = aux1;
+                aux1 = c;
+                c = d;
+            }
+            //IMPRIMO LA VARIABLE CONTADORA SUMA
+            document.write("<br\>"+"<br\>"+"La sumatoria es: "+suma );
+        </script>
+    </body>
+</html>

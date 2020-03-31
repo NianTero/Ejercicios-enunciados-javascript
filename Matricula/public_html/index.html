@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>MAtricula</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //CREO VARIABLES Y LE ASIGNO A VALOR Y QUE INGRESE CANTIDAD DE ESCRITORIOS
+            var numeroc = prompt("Numero de creditos: ");
+            var credito = 85000;
+            var estrato = prompt("Estrato del estudiante: ");
+            var subsidio=0;
+            
+            var total;
+            var descuento;
+            
+            //COMPARO SI ES MENOR A 5 Y HAGO E DESCUENTO DEL 10%
+            if(numeroc <= 20){
+                if(estrato == 1){
+                    subsidio =200000;
+                    total = (credito * numeroc) 
+                    descuento = total-(total * 0.8);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                    document.write("Valor subsidio: "+subsidio+"<br\>");
+                    
+                }
+                else if(estrato == 2){
+                    subsidio =100000;
+                    total = (credito * numeroc) 
+                    descuento = total-(total * 0.5);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                    document.write("Valor subsidio: "+subsidio+"<br\>");
+                }
+                else if(estrato == 3){
+                    total = (credito * numeroc) 
+                    descuento = total-(total * 0.3);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                }
+                
+            }
+             //COMPARO SI ES MAYOR O IGUAL A 5 Y MENOR A 10 Y HAGO EL DESCUENTO DEL 20%
+             else if(credito > 20){
+                if(estrato == 1){
+                    subsidio =200000;
+                    total = ((credito*2)*numeroc); 
+                    descuento = total-(total * 0.8);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                    document.write("Valor subsidio: "+subsidio+"<br\>");
+                    
+                }
+                else if(estrato == 2){
+                    subsidio =100000;
+                    total = ((credito*2)*numeroc); 
+                    descuento = total-(total * 0.5);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                    document.write("Valor subsidio: "+subsidio+"<br\>");
+                }
+                else if(estrato == 3){
+                    total = ((credito*2)*numeroc);  
+                    descuento = total-(total * 0.3);
+                    document.write("Numero de creditos: "+numeroc+"<br\>");
+                    document.write("Valor credito: "+credito+"<br\>");
+                    document.write("Estrato del estudiante: "+estrato+"<br\>");
+                    document.write("Costo de la matricula: "+descuento+"<br\>");
+                }
+                
+            }
+            
+        </script>
+    </body>
+</html>
