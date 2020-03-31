@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cuadratica</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //CREO VARIABLES Y INGRESO DATOS
+            var a = prompt("Ingrese el valor de a: ");
+            var b = prompt("Ingrese el valor de b: ");
+            var c = prompt("Ingrese el valor de c: ");
+            //VARIABLES DE SUMA
+            var arriba1;
+            var abajo1;
+            var total1;
+            //VARIABLS DE RESTA
+            var arriba2;
+            var abajo2;
+            var total2;
+            //HAGO EL RESPECTIVO CALCULO
+            arriba1 = (-1*b) + Math.sqrt((b*b)-(4*a*c));
+            abajo1 = (2 * a);
+            total1 = (arriba1/abajo1)
+            
+            //IMPRIMO X1
+            document.write("X1: "+total1+"<br\>");
+            //HAGO EL RESPECTIVO CALCULO
+            arriba2 = (-1*b) - Math.sqrt((b*b)-(4*a*c));
+            abajo2 = (2 * a);
+            total2 = (arriba2/abajo2)
+            //IMPRIMO X2
+            document.write(total2+"<br\>");
+            
+            
+            
+        </script>
+       
+    </body>
+</html>
