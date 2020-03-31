@@ -1,0 +1,7 @@
+{
+    "name": "Ordenacion_especial_de_un_vector", "version": "1.0.0", "main": "path/to/main.css", "ignore": [
+        ".jshintrc", "**/*.txt"
+    ], "dependencies": {
+    }, "devDependencies": {
+    }
+}

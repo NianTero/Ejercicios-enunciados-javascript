@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            //CREO VARIABLES Y ASIGNO VALORES
+            var posiciones = prompt("Cuantas  posicones quiere: ");
+            arreglo = new Array(posiciones);
+            var contadorP=0;
+            var contadorI=0;
+            //RECORRO EL CICLO Y MIRA SI ES PAR O IMPAR PARA LOS DOS CASOS AGREGO LA FORMULA QUE DICE
+            document.write("SIN ORDENAR"+"<br/>");
+            
+            for(var i = 0; i < posiciones; i++){
+                if (i % 2 == 0){
+                arreglo [i] = (i * i + 1);
+                }
+                else{
+                arreglo [i] = 3 * (i + 1);
+                }
+                //CONTAR LAS CASILLAS SI SON PARES E IMPARES
+                if (arreglo [i] % 2 == 0){
+                contadorP = contadorP + 1;
+                }
+                else{
+                contadorI = contadorI + 1;
+                }
+                //IMPRIMO ARREGLO
+                document.write("["+i+"]="+arreglo[i]+"<br/>");     
+            }
+            
+            //auxiliares
+            par = new Array(contadorP);
+            impar = new Array(contadorI);
+            
+            //LENAR AUXILIARES
+            var k = 0;
+            var l = 0;
+            
+            for(var i = 0; i < posiciones; i++){
+                if (arreglo [i] % 2 == 0){
+                    par[k] = arreglo [i];
+                    k = k + 1;
+                }
+                else{
+                impar[l] = arreglo [i];
+                    l = l + 1;
+                }
+            }
+            
+            //ordenado arreglo impares
+            var aux;
+            document.write("ORDENADO"+"<br/>");
+             for(var i = 0; i < contadorI; i++){
+                  for(var j = i + 1; j < contadorI; j++){
+                      
+                      if(impar[i] > impar[j]){
+                         aux = impar[i];
+                         impar[i] = impar[j];
+                         impar[j] = aux;
+                      }
+                  }
+             }
+             
+            //ordenado arreglo pares
+             for(var i = 0; i < contadorP; i++){
+                  for(var j = i + 1; j < contadorP; j++){
+                      
+                      if(par[i] < par[j]){
+                         aux = par[i];
+                         par[i] = par[j];
+                         par[j] = aux;
+                      }
+                  }
+             }
+             
+             
+             //TRANSCRIBIR DE PARES A IMPARES AL NORMAL
+             for(var i = 0; i < contadorP; i++){
+                arreglo[i] = par[i];   
+            }
+            for(var i = 0; i < contadorI; i++){
+               arreglo[i + contadorP] = impar[i]; 
+            }
+            
+            
+            
+             //IMPRIMO
+            for(var i = 0; i < posiciones; i++){
+                
+                document.write("["+i+"]="+arreglo[i]+"<br/>");     
+            }
+
+        </script> 
+    </body>
+</html>
