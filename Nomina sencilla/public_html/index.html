@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+        //CREO LAS VARIABLES Y LES ASIGNO VALOR
+            var nombre =  prompt("Ingrese nombre: ");
+            var horast=  prompt("Ingrese numero de horas trabajadas: ");
+            var hora =  prompt("Ingrese valor hora: ");
+            var salario=  585000;
+            var extras;
+            
+            
+            //HAGO LA OPERACION DE LAS HORAS TRABAJADAS Y LA LLAMA EXTRAS
+            extras= ( horast * hora);
+            
+            document.write("Extras: " +extras+"<br/>");
+            if(extras > salario){
+                document.write("Ingrese Nombre: " +nombre+"<br/>");
+                document.write("Ingrese Numero de horas trabajadas: " +horast+"<br/>");
+                document.write("Ingrese Valor hora: " +hora+"<br/>");
+                document.write("Ingrese Salario minimo mensual: " +salario+"<br/>");
+                document.write("Nombre: " +nombre+"<br/>");
+                document.write("Salario: " +extras+"<br/>");
+            }
+            else{
+                document.write("Ingrese Nombre: " +nombre+"<br/>");
+                document.write("Ingrese Numero de horas trabajadas: " +horast+"<br/>");
+                document.write("Ingrese Valor hora: " +hora+"<br/>");
+                document.write("Ingrese Salario minimo mensual: " +salario+"<br/>");
+                document.write("Nombre: " +nombre+"<br/>");
+            }
+            
+            
+            
+            
+            
+            
+         </script>
+        
+    </body>
+</html>
