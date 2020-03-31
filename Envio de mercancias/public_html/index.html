@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            //CREO VARIABLES Y LE ASIGNO A VALOR Y QUE INGRESE CANTIDAD DE CREDITOS Y ESTARTO
+            var peso = prompt("Peso de la mercancia: ");
+            var valor = prompt("Valor de la mercancia: ");
+            var dia = prompt("Es lunes [1]Si [2]No: ");
+            var pago = prompt("Tipo de pago [1]efectivo [2]tarjeta: ");
+            var tarifa;
+            var descuento;
+            var promocion;
+            var total;
+            
+            /**COMPARO SI ES MENOR O IGUAL A 20 Y EL ESTRATO QUE HAYA SELECCIONADO EL USUARIO Y HAGO EL 
+              RESPECTIVO CALCULO 
+            **/
+           
+            
+           
+            if(peso < 100){
+                tarifa = 20000;
+                
+                if((dia == 1)&&(pago == 2))
+                {
+                    promocion = tarifa*0.5;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");    
+                }
+                else if((valor > 1000000)&&(pago == 1))
+                {
+                    promocion = tarifa*0.6;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");   
+                }
+                else if((valor >= 300000)&&(valor <= 600000))
+                {
+                    descuento = tarifa*0.1;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                } 
+                else if((valor >= 600000)&&(valor <= 1000000))
+                {
+                    descuento = tarifa*0.2;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+                else if(valor > 1000000)
+                {
+                    descuento = tarifa*0.3;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+
+            }
+            ////////////////////////////////////////////////////////////
+            
+             else if((peso >= 100)&&(peso <= 150))
+             {
+                tarifa = 25000;
+                
+                if((dia == 1)&&(pago == 2))
+                {
+                    promocion = tarifa*0.5;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");    
+                }
+                else if((valor > 1000000)&&(pago == 1))
+                {
+                    promocion = tarifa*0.6;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");   
+                }
+                else if((valor >= 300000)&&(valor <= 600000))
+                {
+                    descuento = tarifa*0.1;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                } 
+                else if((valor >= 600000)&&(valor <= 1000000))
+                {
+                    descuento = tarifa*0.2;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+                else if(valor > 1000000)
+                {
+                    descuento = tarifa*0.3;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+
+            }
+            /////////////////////////////////////////////////////////////////
+             else if((peso > 150)&&(peso <= 200))
+             {
+                tarifa = 30000;
+                
+                if((dia == 1)&&(pago == 2))
+                {
+                    promocion = tarifa*0.5;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");    
+                }
+                else if((valor > 1000000)&&(pago == 1))
+                {
+                    promocion = tarifa*0.6;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Promocion: "+promocion+"<br\>");
+                    document.write("Total a pagar "+promocion+"<br\>");   
+                }
+                else if((valor >= 300000)&&(valor <= 600000))
+                {
+                    descuento = tarifa*0.1;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                } 
+                else if((valor >= 600000)&&(valor <= 1000000))
+                {
+                    descuento = tarifa*0.2;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+                else if(valor > 1000000)
+                {
+                    descuento = tarifa*0.3;
+                    total= tarifa-descuento;
+                    document.write("Peso de la mercancia: "+peso+ "<br\>");
+                    document.write("Valor de la mercancia: "+valor+ "<br\>");
+                    document.write("Es lunes [1]Si [2]No: "+dia+ "<br\>");
+                    document.write("Tipo de pago [1]efectivo [2]tarjeta: "+pago+"<br\>");
+                    document.write("Tarifa "+tarifa+"<br\>");
+                    document.write("Descuento "+descuento+"<br\>");
+                    document.write("Total a pagar "+total+"<br\>"); 
+                }
+
+            }
+           
+            
+        </script>
+    </body>
+</html>

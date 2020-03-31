@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var valor = 650000;
+            var escritorios = prompt("Cuantos escritorios compro: ");
+            var total;
+            var descuento;
+             
+            if(escritorios < 5){
+                total = (escritorios * valor) 
+                descuento = total-(total * 0.1);
+                document.write("Numero de escritorios: "+escritorios+"<br\>");
+                document.write("El valor a pagar es: "+descuento+"<br\>");
+            }
+            
+             else if((escritorios => 5)&&(escritorios < 10)){
+                total = (escritorios * valor) 
+                descuento = total-(total * 0.2);
+                document.write("Numero de escritorios: "+escritorios+"<br\>");
+                document.write("El valor a pagar es: "+descuento+"<br\>");
+            }
+            
+            else if(escritorios => 10){
+                total = (escritorios * valor) 
+                descuento = total-(total * 0.4);
+                document.write("Numero de escritorios: "+escritorios+"<br\>");
+                document.write("El valor a pagar es: "+descuento+"<br\>");
+            }
+            
+        </script>
+    </body>
+</html>
